@@ -34,7 +34,7 @@ const Header = () => {
         Get rewarded for your travels – unlock instant savings of 10% or
         more with a free Bulatbooking account
       </p>
-      <Button className= 'mt-8 mb-12 w-44'>Sign In/ Register</Button>
+      <Button className= 'mt-8 mb-12 lg:w-44'>Sign In/ Register</Button>
     </div>
 
     <section className="md:flex border-solid border-4 border-yellow-500 h-40 md:h-14 

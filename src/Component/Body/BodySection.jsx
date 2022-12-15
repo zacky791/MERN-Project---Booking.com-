@@ -55,6 +55,10 @@ const BodySection = () => {
         </ul>
     </div>
     <BodySection2/>
+    <div className='container p-2 mx-auto lg:px-10 lg:mt-8 lg:mb-8 lg:border-solid lg:border-4 border-yellow-500 lg:w-9/12'>
+      <h1 className='font-bold text-lg'>Explore and find Hotels in Malaysia</h1>
+      <p>Straddling the Asian mainland and the island of Borneo, Malaysia is a wonderful jumble of multiculturalism, wildlife-rich jungles and vibrant cities. Among Malaysia’s urban hotspots is its culturally diverse capital Kuala Lumpur (‘KL’ to locals), home to the iconic Petronas Towers, mammoth shopping malls and nightlife of the Golden Triangle. George Town, capital city of the island of Penang, is widely renowned as the food capital of Malaysia. Delicious street-food treats include grilled satay skewers, Chinese congee (rice porridge) and otak otak (steamed fish curry). This part of Southeast Asia is ideal for picturesque wildlife wanders wand watersports. Some of the best scuba diving spots and powdery soft beaches can be found around the islands of the East Coast peninsular. You can also hike through some of the oldest rainforests in the world and take up whitewater rafting within one of the country’s many national parks. Whether you’re looking to camp in Malaysia’s national parks or stay with the locals in a homestay, you’ll find accommodation to suit your needs. Main cities and beach resorts also offer a wide selection of hotels and guest houses.</p>
+    </div>
     </section>
   )
 }
