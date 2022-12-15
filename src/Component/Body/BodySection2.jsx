@@ -1,35 +1,34 @@
 import React from 'react'
-import BodySection2 from './BodySection2'
 import DataFormat from './DataFormat'
 
-const BodySection = () => {
+const BodySection2 = () => {
 
     const DATA_STORE = [
         {   
             id:'m1',
-            picCountry: 'https://i.pinimg.com/564x/a2/36/ff/a236ffe7b62cf52f01a309766af42dda.jpg',
-            country : "England",
+            picCountry: 'https://i.pinimg.com/564x/aa/6a/d0/aa6ad05961393c18cb5ac00be5db7cff.jpg',
+            city : "Melaka",
             attraction : "Shopping",
             hotels : '124 places',
         },
         {   
             id:'m2',
-            picCountry: 'https://i.pinimg.com/564x/64/96/d8/6496d88c5927c58fa3524de0e2e4644a.jpg',
-            country : "Paris",
+            picCountry: 'https://i.pinimg.com/564x/04/05/f4/0405f482d386baf04532b4b6e660d138.jpg',
+            city : "Penang",
             attraction : "Food",
             hotels : '193 places'
         },
         {   
             id:'m3',
-            picCountry: 'https://i.pinimg.com/564x/c9/bf/75/c9bf75cc7630fd4743db84ef89b29d62.jpg',
-            country : "Germany",
+            picCountry: 'https://i.pinimg.com/564x/82/79/fd/8279fdc9f71a0f40b80834861bcc4155.jpg',
+            city : "Kuala Lumpur",
             attraction : "Sightseeing",
             hotels : '173 places'
         },
         {   
           id:'m4',
-          picCountry: 'https://i.pinimg.com/564x/1d/65/db/1d65dba44013ac893c7e3167fc939da8.jpg',
-          country : "Iceland",
+          picCountry: 'https://i.pinimg.com/564x/de/59/44/de5944be778c6d86cd02f974d0f88854.jpg',
+          city : "Terengganu",
           attraction : "Nature",
           hotels : '159 places'
         },
@@ -38,7 +37,7 @@ const BodySection = () => {
       const data = DATA_STORE.map((data)=>
           <DataFormat 
           picCountry={data.picCountry} 
-          place={data.country}
+          place={data.city}
           attraction={data.attraction}
           hotels={data.hotels}
           key={data.id}
@@ -47,16 +46,15 @@ const BodySection = () => {
 
   return (
     <section>
-    <div className='container mx-auto lg:px-52'>
-        <h1 className='text-xl font-bold mt-4 lg:ml-20'>Top destinations for World city trips</h1>
-        <p className='mb-4 lg:ml-20'>Find hotels in some of the most popular cities in World</p>
+    <div className='container mx-auto lg:px-52 '>
+        <h1 className='text-xl font-bold mt-4 ml-20'>Hotels in the most popular regions in Malaysia</h1>
+        <p className='mb-4 ml-20'>Find hotels in some of the most popular cities in Malaysia</p>
         <ul className='flex flex-col md:flex-row justify-center items-center gap-0 md:gap-14'>
           {data}
         </ul>
     </div>
-    <BodySection2/>
     </section>
   )
 }
 
-export default BodySection
+export default BodySection2
