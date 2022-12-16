@@ -3,7 +3,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <div className="container mx-auto text-xs mt-5 ">
-      <div className="flex justify-center space-x-32">
+      <div className="flex justify-center md:space-x-32">
         <ul className="fList">
           <li className="fListItem">Countries</li>
           <li className="fListItem">Regions</li>
