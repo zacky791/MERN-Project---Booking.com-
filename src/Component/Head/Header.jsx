@@ -7,7 +7,7 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Header = () => {
@@ -27,6 +27,8 @@ const Header = () => {
     children:0,
     rooms:1,
   })
+
+  const navigator = useNavigate()
 
   const handleOption = (name, operation) => {
     setOptions((prev) => {
@@ -99,34 +101,34 @@ const Header = () => {
         <div className="space-x-1 flex justify-around">
         <span>Adult</span>
         <div className="space-x-2">
-        <Button className='w-8' onClick={()=>handleOption('adult','d')} disable={options.adult <= 1}>-</Button>
+        <Button className='w-7' onClick={()=>handleOption('adult','d')} disable={options.adult <= 1}>-</Button>
         <span>{options.adult}</span>
-        <Button className='w-8' onClick={()=>handleOption('adult','i')}>+</Button>
+        <Button className='w-7' onClick={()=>handleOption('adult','i')}>+</Button>
         </div>
         </div>
 
         <div className="space-x-1 flex justify-around">
         <span>Child</span>
         <div className="space-x-2">
-        <Button className='w-8' onClick={()=>handleOption('children','d')} disable={options.children <= 1}>-</Button>
+        <Button className='w-7' onClick={()=>handleOption('children','d')} disable={options.children <= 0}>-</Button>
         <span>{options.children}</span>
-        <Button className='w-8' onClick={()=>handleOption('children','i')}>+</Button>
+        <Button className='w-7' onClick={()=>handleOption('children','i')}>+</Button>
         </div>
         </div>
 
         <div className="space-x-1 flex justify-around">
         <span>Room</span>
         <div className="space-x-2">
-        <Button className='w-8' onClick={()=>handleOption('rooms','d')} disable={options.rooms <= 1}>-</Button>
+        <Button className='w-7' onClick={()=>handleOption('rooms','d')} disable={options.rooms <= 1}>-</Button>
         <span>{options.rooms}</span>
-        <Button className='w-8' onClick={()=>handleOption('rooms','i')}>+</Button>
+        <Button className='w-7' onClick={()=>handleOption('rooms','i')}>+</Button>
         </div>
         </div>
         
       </div>
       }
       </section>
-        <Button className='mr-4' onClick={()=>{Navigate('/hotel')}}>Search</Button>
+        <Button className='mr-4' onClick={()=>{navigator('/hotel')}}>Search</Button>
     </section>
     </section>
   )

@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router'
 import Button from '../../Component/UI/Button'
 
 const HotelFormat = (props) => {
+  const navigator = useNavigate()
   return (
     <section>
     <li className='w-2/4 flex flex-col lg:flex-row mx-auto p-4  justify-center space-x-10 mt-10 border-2 border-blue-500 '>
@@ -17,7 +19,7 @@ const HotelFormat = (props) => {
       </div>
       <div className='flex flex-col mt-24 items-center '>
         <span className='text-red-500 font-bold'>{props.price}</span>
-        <Button className='w-40 mt-4'>See Room</Button>
+        <Button className='w-40 mt-4' onClick={()=>{navigator('/hotel/list')}}>See Room</Button>
       </div>
     </li>
     </section>
