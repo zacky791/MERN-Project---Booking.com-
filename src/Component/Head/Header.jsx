@@ -7,6 +7,7 @@ import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import { Navigate } from "react-router-dom";
 
 
 const Header = () => {
@@ -125,7 +126,7 @@ const Header = () => {
       </div>
       }
       </section>
-        <Button className='mr-4'>Search</Button>
+        <Button className='mr-4' onClick={()=>{Navigate('/hotel')}}>Search</Button>
     </section>
     </section>
   )

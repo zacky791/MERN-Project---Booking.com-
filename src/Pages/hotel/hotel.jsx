@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Navbar from '../../Component/Head/Navbar'
+import HeaderHotel from './HeaderHotel'
+import HotelDisplay from './HotelDisplay'
 
 const hotel = () => {
   return (
-    <div>
+    <Fragment>
       <Navbar/>
-    </div>
+      <HeaderHotel/>
+      <HotelDisplay/>
+    </Fragment>
   )
 }
 
