@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+//schema are we set all the requirement (format) needed
+// when accesing the api 
 const HotelSchema = new mongoose.Schema({
 
     name:{

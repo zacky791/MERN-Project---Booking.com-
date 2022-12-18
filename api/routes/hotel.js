@@ -37,9 +37,8 @@ router.delete('/:id' , async (req,res)=>{
 
     try {
         await Hotel.findByIdAndDelete(
-            req.params.id,
-            { $set:req.body },
-            {new:true})
+            req.params.id
+            )
             
         res.status(200).json("Hotel has been deleted")
     } catch (err) {
@@ -63,13 +62,13 @@ router.get('/:id' , async (req,res)=>{
 
 //GET ALL
 
-router.get('/' , async (req,res)=>{
+router.get('/' , async (req,res,next)=>{
 
     try {
         const hotels = await Hotel.find()  
         res.status(200).json(hotels)
     } catch (err) {
-        res.status(500).json(err)
+        next(err)
     }
 })
 
