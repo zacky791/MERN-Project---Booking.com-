@@ -1,17 +1,16 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import authRouter from './routes/auth.js'
-import usersRouter from './routes/users.js'
-import hotelsRouter from './routes/hotel.js'
-import roomsRouter from './routes/rooms.js'
+import authRouter from './controller/Auth Routes.js'
+import usersRouter from './controller/users.js'
+import hotelsRouter from './controller/hotel.js'
+import roomsRouter from './controller/rooms.js'
 import cookieParser from "cookie-parser";
 
 const app = express()
 dotenv.config()
 mongoose.set("strictQuery", false); //for error when start node js
 
-const url = 'mongodb+srv://bulat:123@cluster0.a9fgj0p.mongodb.net/?retryWrites=true&w=majority'
 const connect = async () => {
 
     try {

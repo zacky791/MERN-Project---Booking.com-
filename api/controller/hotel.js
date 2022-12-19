@@ -1,10 +1,11 @@
 import express from 'express'
 import Hotel from '../models/Hotel.js'
+import { verifyAdmin } from '../utils/verifyToken.js'
 
 const router = express.Router()
 
 //CREATE
-router.post('/' , async (req,res)=>{
+router.post('/' , verifyAdmin , async (req,res)=>{
 
     const newHotel = new Hotel(req.body)
 
@@ -17,7 +18,7 @@ router.post('/' , async (req,res)=>{
 })
 
 //UPDATE
-router.put('/:id' , async (req,res)=>{
+router.put('/:id', verifyAdmin , async (req,res)=>{
 
     try {
         const updatedHotel = await Hotel.findByIdAndUpdate(
@@ -33,7 +34,7 @@ router.put('/:id' , async (req,res)=>{
 
 //DELETE
 
-router.delete('/:id' , async (req,res)=>{
+router.delete('/:id' , verifyAdmin , async (req,res)=>{
 
     try {
         await Hotel.findByIdAndDelete(
